@@ -7,10 +7,17 @@ app:
     POSTGRES_HOST: postgres
     POSTGRES_DB: postgres
     POSTGRES_USER: postgres
+    POSTGRES_PASSWORD: postgres300
   links:
     - redis
     - postgres
 redis:
   image: redis:3.0
 postgres:
-   image: postgres:9.5
+  image: postgres:9.5
+  environment:
+    REDIS_URL: "redis://redis:6379"
+    POSTGRES_HOST: postgres
+    POSTGRES_DB: postgres
+    POSTGRES_USER: postgres
+    POSTGRES_PASSWORD: postgres300

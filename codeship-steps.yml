@@ -1,3 +1,2 @@
 - service: app
-  command: id
-#  command: bash check.sh
+  command: bash check.sh
